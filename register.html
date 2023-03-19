@@ -10,10 +10,17 @@
   <body>
     <header>
       <h1>My Awesome User Registration System</h1>
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a class="link-register" href="register.html">Register User</a>
+      </nav>
     </header>
     <main>
       <h2>Register a new user</h2>
-      <div class="form">
+      <div id="notifications" class="hide">
+        All the notifications should be here
+      </div>
+      <div class="form-container container">
         <div>
           <label>Email*:</label>
           <input type="email" id="txtEmail" />
@@ -39,7 +46,7 @@
           <input type="text" id="txtAddress" />
         </div>
         <div>
-          <label>Phone Number:</label>
+          <label>Phone:</label>
           <input type="tel" id="txtPhoneNumber" />
         </div>
         <div>
@@ -57,6 +64,7 @@
         <button onclick="register();">Submit</button>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="scripts/register.js"></script>
+        <script src="scripts/storeManager.js"></script>
       </div>
     </main>
   </body>

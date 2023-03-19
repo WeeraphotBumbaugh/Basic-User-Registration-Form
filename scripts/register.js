@@ -20,31 +20,35 @@ function validate(aUser) {
 
   if (aUser.email === "") {
     valid = false;
-    $("#txtEmail").addClass("error");
-    console.log("Please enter an email");
+    displayNotification("Please fill out the required fields.", "error");
   }
   if (aUser.password === "") {
     valid = false;
-    $("#txtPassword").addClass("error");
-    console.log("Please enter a password");
+    displayNotification("Please fill out the required fields", "error");
   }
   if (aUser.firstName === "") {
     valid = false;
-    $("#txtFirstName").addClass("error");
-    console.log("Please enter a first name");
+    displayNotification("Please fill out the required fields", "error");
   }
   if (aUser.lastName === "") {
     valid = false;
-    $("#txtLastName").addClass("error");
-    console.log("Please enter a last name");
+    displayNotification("Please fill out the required fields", "error");
   }
   if (aUser.payment === "") {
     valid = false;
-    console.log("Please enter a payment method");
+    displayNotification("Please fill out the required fields", "error");
   }
   return valid;
 }
-
+function displayNotification(msg, notificationType) {
+  let DIV = $("#notifications");
+  DIV.removeClass("hide error success");
+  DIV.addClass(notificationType).text(msg);
+}
+function hideNotification() {
+  let DIV = $("#notifications");
+  DIV.addClass("hide");
+}
 function register() {
   let inputEmail = $("#txtEmail").val();
   let inputPassword = $("#txtPassword").val();
@@ -68,7 +72,11 @@ function register() {
     inputColor
   );
   if (validate(newUser)) {
-    console.log(newUser);
+    displayNotification("Successful registration", "success");
+    setTimeout(function () {
+      hideNotification();
+    }, 2000);
+    saveUser(newUser);
     $("input").val("");
   }
 }

@@ -1,4 +1,74 @@
+/*GLOBAL*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: arial;
+}
+.container {
+  width: 50%;
+  margin: 30px auto;
+}
+/*HEADER*/
+header {
+  background-color: coral;
+  height: 8vh;
+  text-align: center;
+}
+/*NAVIGATION*/
+.navigation {
+  background-color: coral;
+  margin-top: 5px;
+  height: 6vh;
+}
+/*NOTIFICATIONS*/
+#notifications {
+  width: 30%;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 10px;
+  height: 30px;
+  font-size: 14px;
+  margin: 10px auto;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.success {
+  background-color: green;
+  color: dark green;
+}
 .error {
-  background-color: darkred;
+  background-color: pink;
   border: 1px solid gray;
+}
+
+/*MAIN*/
+main {
+  margin-top: 45px;
+}
+h2 {
+  text-align: center;
+}
+.form-container {
+  background-color: gray;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.form-container div {
+  margin-bottom: 10px;
+}
+input,
+select {
+  padding: 3px;
+  border-radius: 3px;
+  border: none;
+}
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
 }
