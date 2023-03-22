@@ -1,0 +1,35 @@
+/*GLOBAL*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: arial;
+}
+/*HEADER*/
+header {
+  background-color: coral;
+  height: 8vh;
+  text-align: center;
+}
+/*NAVIGATION*/
+.navigation {
+  background-color: coral;
+  margin-top: 5px;
+  height: 6vh;
+}
+/*MAIN*/
+main {
+  margin-top: 45px;
+}
+h2 {
+  text-align: center;
+}
+.container {
+  margin-top: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 40%;
+}
